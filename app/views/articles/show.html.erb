@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/stylesheets/articles.scss">
+<div class="container">
+  <div class="content">
+    <h1><%= @article.title %></h1>
+    <p style="text-align: justify;"><%= @article.text %></p>
+
+    <!-- display comments attached to the article -->
+    <%= render 'comments/comment' %>
+    <br>
+    <!-- adding a new comment -->
+    <%= render 'comments/form' %>
+    <br>
+    <!-- Creates a link to go Edit Articles-->
+    <%= link_to 'Edit Article', edit_article_path(@article) %> |
+    <!-- Creates a link to go back to Show Articles-->
+    <%= link_to 'Back', articles_path %>
+
+  </div>
+</div>

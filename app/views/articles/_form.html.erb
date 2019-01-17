@@ -1,0 +1,22 @@
+<div class="errormessage">
+  <%= form_with model: @article, local: true do |form| %>
+      <p>
+        <strong><%= form.label :title %></strong><br>
+        <%= form.text_field :title %>
+      </p>
+
+      <p>
+        <strong><%= form.label :text %></strong><br>
+        <%= form.text_area :text %>
+      </p>
+
+      <% if @article.errors.any? %>
+          <% err = "Title cannot be blank or less than 5 characters." %>
+          <p><%= err %></p>
+      <% end %>
+
+      <p>
+        <%= form.submit "Create Article", class: "btn-submit"%>
+      </p>
+  <% end %>
+</div>

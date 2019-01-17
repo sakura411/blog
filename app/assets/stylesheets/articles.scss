@@ -1,0 +1,49 @@
+body {
+  background-color: black;
+}
+.content {
+  background-color: white;
+  padding: 50px;
+}
+.header {
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+.articlestable {
+  border-collapse:  collapse;
+}
+.articlestable th, .articlestable td {
+  text-align:  left;
+  padding: 10px;
+}
+.articlestable tr:hover {
+  background-color: #cceeff;
+}
+.articlestable tr {
+  background-color: #e6f7ff;
+}
+.articlestable th {
+    background-color: black;
+    color: white;
+}
+p {
+  font-size: 15px;
+}
+input, textarea {
+  width: 300px;
+}
+form button {
+  width: 100px;
+}
+.btn-submit {
+  background-color: #3cb371;
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  color: white;
+}
+
+
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/

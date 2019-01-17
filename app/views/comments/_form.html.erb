@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/stylesheets/comments.css">
+<div class="commentform">
+  <h3>Add a comment</h3>
+  <%= form_with(model: [@article, @article.comments.build],
+                  local: true) do |form| %>
+  <strong>Name:</strong><br>
+  <%= form.text_field :commenter %><br>
+
+  <strong>Text:</strong><br>
+  <%= form.text_area :body %><br>
+
+  <% if params[:commenter].blank? %>
+    <p class="errorcomment"><strong><%= @errorcomment %></strong></p>
+  <% end %>
+
+  <%= form.submit "Submit", class: "btn-comment" %>
+
+  <% end %>
+</div>

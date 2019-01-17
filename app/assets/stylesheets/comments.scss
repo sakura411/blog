@@ -1,0 +1,32 @@
+.comment {
+  padding: 3px 20px 20px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px grey;
+}
+
+.comment table {
+  text-align: left;
+}
+
+.comment th {
+  background-color: white;
+}
+
+.comment tr:hover {
+  cursor: default;
+}
+
+.btn-comment {
+  background-color: #3cb371;
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  color: white;
+}
+
+.errorcomment {
+  color: red;
+}
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
