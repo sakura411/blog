@@ -5,14 +5,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 30.times do
   Article.create(
-    title: { Faker::Music.band },
+    title: Faker::Music.band,
     text: Faker::Lorem.paragraph(6, true)
   )
 end
 
 100.times do
   Comment.create(
-    commenter: { Faker::Name.name },
+    commenter: Faker::Name.name,
     body: Faker::Lorem.sentence,
     article_id: Faker::Number.between(1, 30)
   )
