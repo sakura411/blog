@@ -1,11 +1,9 @@
 <link rel="stylesheet" type="text/text/css" href="/stylesheets/articles.scss">
-
 <div class="container">
   <div class="content">
-      <div class="header">
-        <h1>Listing Articles</h1>
-      </div><br>
-
+      <h1 class="header">Listing Articles</h1>
+      <h5>Welcome! We have great new articles for you to read today!</h5>
+      <p>Check out my blogs below.</p>
       <div class="articlestable">
         <table>
           <tr>
@@ -27,8 +25,5 @@
 
       <p><strong>Do you want to create your own article? </strong>
       <%= link_to 'Create New Article', new_article_path %></p>
-
-      <%= link_to 'Go Home', welcome_index_path %>
-
   </div>
 </div>
