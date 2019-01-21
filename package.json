@@ -1,5 +1,13 @@
 {
   "name": "blog",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }

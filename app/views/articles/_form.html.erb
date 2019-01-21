@@ -2,12 +2,12 @@
   <%= form_with model: @article, local: true do |form| %>
       <p>
         <strong><%= form.label :title %></strong><br>
-        <%= form.text_field :title %>
+        <%= form.text_field :title, class: "article_textfield" %>
       </p>
 
       <p>
         <strong><%= form.label :text %></strong><br>
-        <%= form.text_area :text %>
+        <%= form.text_area :text, class: "article_textarea"%>
       </p>
 
       <% if @article.errors.any? %>
@@ -16,7 +16,7 @@
       <% end %>
 
       <p>
-        <%= form.submit "Create Article", class: "btn-submit"%>
+        <%= form.submit "Submit Article", class: "btn btn-success"%>
       </p>
   <% end %>
 </div>

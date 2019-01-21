@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     # display articles in order
-    @articles = Article.order("title").page(params[:page]).per(10)
+    @articles = Article.order("title").page(params[:page]).per(9)
   end
 
   def show

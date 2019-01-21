@@ -1,9 +1,7 @@
 <link rel="stylesheet" type="text/text/css" href="/stylesheets/comments.scss">
-<div class="comment">
-  <h3>Comments</h3>
-  <% @article.comments.each do |comment| %>
-    <b><%= comment.commenter %>:</b>
-    <%= comment.body %>
-    <%= link_to 'Delete', [comment.article, comment], method: :delete %><br>
-  <% end %>
-</div>
+<h4>Comments</h4>
+<% @article.comments.each do |comment| %>
+  <p><b><%= comment.commenter %></b>
+  <%= simple_format(comment.body) %>
+  <%= link_to 'Delete', [comment.article, comment], method: :delete %></p>
+<% end %>

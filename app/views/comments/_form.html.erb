@@ -1,19 +1,17 @@
 <link rel="stylesheet" href="/stylesheets/comments.css">
-<div class="commentform">
-  <h3>Add a comment</h3>
-  <%= form_with(model: [@article, @article.comments.build],
-                  local: true) do |form| %>
-  <strong>Name:</strong><br>
-  <%= form.text_field :commenter %><br>
+<h5>Add a comment</h5>
+<%= form_with(model: [@article, @article.comments.build],
+                local: true) do |form| %>
+<strong>Name:</strong><br>
+<%= form.text_field :commenter, class: "comment_textfield" %><br>
 
-  <strong>Text:</strong><br>
-  <%= form.text_area :body %><br>
+<strong>Text:</strong><br>
+<%= form.text_area :body, class: "comment_textarea" %><br>
 
-  <% if params[:commenter].blank? %>
-    <p class="errorcomment"><strong><%= @errorcomment %></strong></p>
-  <% end %>
+<% if params[:commenter].blank? %>
+  <p class="errorcomment"><strong><%= @errorcomment %></strong></p>
+<% end %>
 
-  <%= form.submit "Submit", class: "btn-comment" %>
+<%= form.submit "Submit", class: "btn btn-success" %>
 
-  <% end %>
-</div>
+<% end %>

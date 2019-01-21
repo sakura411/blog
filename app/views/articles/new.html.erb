@@ -1,12 +1,16 @@
-<!--
-Create part of the CRUD
-this shows a form that allows
-the user to create a new article
--->
+<div class="jumbotron text-center" style="background-color:black;color:white;">
+  <h1>Create Your Own Article</h1>
+</div>
+
 <div class="container">
-  <div class="content">
-    <h1>New Article</h1>
-    <%= render 'form' %>
-    <%= link_to 'Go Back', articles_path %>
-  </div>
+  <p>Id neque nemo. Dolores iusto facere est ad. Accusamus ipsa dolor ut. Dolores iusto facere est ad. Accusamus ipsa dolor ut.</p>
+  <%= render 'form' %>
+</div>
+
+<br>
+
+<div class="jumbotron bg-dark" style="color:white;margin-bottom:0;">
+  <p>Go to...</p>
+  <p><%= link_to 'Home', welcome_index_path %></p>
+  <%= link_to 'See All Articles', articles_path %>
 </div>

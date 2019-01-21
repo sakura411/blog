@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'articles/index' => 'articles#index'
+  get 'welcome/index' => 'welcome#index'
 
   resources :articles do
     resources :comments
   end
 
-  root 'articles#index' # localhost:3000
+  root 'welcome#index' # localhost:3000
 
   get '/articles' => 'articles#index'
   get '/articles/:id' => 'articles#show'

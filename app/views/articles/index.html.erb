@@ -1,29 +1,37 @@
 <link rel="stylesheet" type="text/text/css" href="/stylesheets/articles.scss">
-<div class="container">
-  <div class="content">
-      <h1 class="header">Listing Articles</h1>
-      <h5>Welcome! We have great new articles for you to read today!</h5>
-      <p>Check out my blogs below.</p>
-      <div class="articlestable">
-        <table>
-          <tr>
-            <th>Title</th>
-            <th>Text</th>
-            <th></th>
-          </tr>
-          <% @articles.each do |article| %>
-          <tr>
-            <td><strong><%= link_to article.title, article_path(article) %></strong></td>
-            <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px;"><%= article.text %></td>
-            <td><%= link_to 'Delete', article_path(article.id), method: :delete%></td>
-          </tr>
-          <% end %>
-        </table>
-        <%= paginate @articles %>
 
-      </div>
+<div class="jumbotron" style="color:white;text-shadow: 5px 5px 6px black;background-image:url(http://tcmpublishingzim.com/wp-content/uploads/2017/10/book-publishing-3.jpg);background-size:cover;margin-bottom:0;">
+  <h1>Listing Articles</h1>
+</div>
 
-      <p><strong>Do you want to create your own article? </strong>
-      <%= link_to 'Create New Article', new_article_path %></p>
+<nav class="navbar navbar-expand-sm bg-dark">
+  <ul class="navbar-nav">
+    <li><a class="nav-link" href="welcome/index">Home</a></li>
+  </ul>
+</nav>
+
+<div class="container-fluid" style="padding-top:20px">
+  <h4>Welcome!</h4>
+  <p>We have great new articles for you to read today!</p>
+  <p>Check out my blogs below.</p><br>
+  <div class="row">
+    <% @articles.each do |article| %>
+    <div class="col-sm-4">
+      <h5><%= link_to article.title, article_path(article) %></h5>
+      <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px;"><%= article.text %></p>
+      <hr>
+    </div>
+    <% end %>
   </div>
+  <%= paginate @articles %>
+  <br>
+  <hr>
+  <br>
+  <h4>Hello Blogs accepts new articles!</h4>
+  <p><strong>Do you want to create your own article? </strong>
+  <%= link_to 'Create New Article', new_article_path %></p><br>
+</div>
+
+<div class="jumbotron bg-dark" style="margin-bottom:0;color:white;">
+  <p>You've reached the end.</p>
 </div>

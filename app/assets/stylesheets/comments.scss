@@ -1,27 +1,6 @@
-.comment {
-  padding: 3px 20px 20px 20px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px grey;
-}
-
-.comment table {
-  text-align: left;
-}
-
-.comment th {
-  background-color: white;
-}
-
-.comment tr:hover {
-  cursor: default;
-}
-
-.btn-comment {
-  background-color: #3cb371;
-  padding: 10px;
-  display: inline-block;
-  border: none;
-  color: white;
+.comment_textarea, .comment_textfield {
+  resize:none;
+  width: 100%;
 }
 
 .errorcomment {

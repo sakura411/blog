@@ -1,18 +1,24 @@
 <link rel="stylesheet" href="/stylesheets/articles.scss">
-<div class="container">
-  <div class="content">
+<div class="jumbotron text-center" style="background-color:black;color:white;">
     <h1><%= @article.title %></h1>
-    <p style="text-align: justify;"><%= @article.text %></p>
+</div>
 
-    <%= link_to 'Edit Article', edit_article_path(@article) %>
-    <br><br>
+<div class="container" style="margin:50px;">
+  <p style="color:grey">
+    <%= @article.created_at.to_formatted_s(:long)%> |
+    <%= link_to 'Edit Article', edit_article_path(@article) %> |
+    <%= link_to 'List of Articles', articles_path %>
+  </p>
+  <p style="text-align: justify;"><%= simple_format(@article.text) %></p>
+  <br>
+  <hr>
+  <%= render 'comments/comment' %>
+  <hr>
+  <%= render 'comments/form' %>
+</div>
 
-    <%= render 'comments/comment' %>
-    <br>
-
-    <%= render 'comments/form' %>
-    <br>
-
-    <%= link_to 'Back', articles_path %>
-  </div>
+<div class="jumbotron bg-dark" style="margin-bottom:0;color:white;">
+  <p>Go to...</p>
+  <p><%= link_to 'Edit Article', edit_article_path(@article) %></p>
+  <p><%= link_to 'See All Articles', articles_path %></p>
 </div>
